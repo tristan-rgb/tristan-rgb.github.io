@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Datos</title>
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+    <header>
+        <table>
+            <tr>
+                <td width="30%">
+                    <a href="index.html">
+                        <img src="img/LogoDS.png" id="LogoTipo" alt="Healthy Lifestyle CETI" width="120em" height="120em">
+                    </a>
+                </td>
+                <td align="center" width="36.5%">
+                    <h1>Healthy Lifestyle CETI</h1>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <div class="formulario">
+        <h2>Regístrate</h2>
+        <form method="post" action="recibir.php">
+            <p>Nombre</p>
+            <input autofocus type="text" name="txtNombre" class="contorno" required>
+            <p>Apellido Paterno</p>
+            <input type="text" name="txtApellidoP" class="contorno" required>
+            <p>Apellido Materno</p>
+            <input type="text" name="txtApellidoM" class="contorno" required>
+            <p>Telefono celular</p>
+            <input type="tel" name="txtTelefono" class="controno" pattern="[0-9]{10}" placeholder="33-22-44-55-66" required>
+            <p>Correo Electronico</p>
+            <input type="text" name="txtCorreo" class="contorno" required>
+            <p>Contraseña</p>
+            <input type="password" placeholder="Min 6 character" name="txtPassword" class="contorno" required>
+            <p class="centrar"></p>
+
+<!-- Checkbox para aceptar políticas de privacidad -->
+<p>
+    <input type="checkbox" id="aceptarPoliticas" required>
+    Aceptar <a href="politicas_privacidad.php?origen=registro.html" class="Etiquetas">Políticas de Privacidad</a>
+</p>
+
+            <input type="submit" class="btn" name="btnEnviar" value="Enviar">
+            Desea <a class="volver" href="prueba.html">volver</a>?
+        </form>
+    </div>
+</body>
+</html>

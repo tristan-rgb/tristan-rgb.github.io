@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/prueba.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel="stylesheet">
+    <title>Inicio - Página de Salud Mental CETI Tonala</title>
+</head>
+<body style="background-image: url('img/paz.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    
+    <div class="container-form sign-up">
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido a Healthy Lifestyle CETI</h2>
+                <p>Si ya tienes una cuenta por favor inicia sesión aquí</p>
+                <button class="sign-in-btn">Iniciar Sesión</button>
+            </div>
+        </div>
+        
+        <!-- Formulario de registro con la nueva clase 'formulario-registro' -->
+        <form class="formulario formulario-registro" id="form-sign-up" action="recibir.php" method="POST" onsubmit="return validatePasswords()">
+            <h2 class="create-account">Crear una cuenta</h2>
+            <div class="iconos">
+                <div class="border-icon">
+                    <i class='bx bxl-google'></i>
+                </div>
+            </div>
+            <p class="cuenta-gratis">Crear Cuenta Gratis</p>
+            <input type="text" name="txtNombre" placeholder="Nombre" required>
+            <input type="text" name="txtApellidoP" placeholder="Apellido Paterno" required>
+            <input type="text" name="txtApellidoM" placeholder="Apellido Materno" required>
+            <input type="tel" name="txtTelefono" placeholder="Teléfono" required>
+            <input type="email" name="txtCorreo" placeholder="Email" required>
+            <input type="password" name="txtPassword" id="password" placeholder="Contraseña" required>
+            <input type="password" name="txtConfirmPassword" id="confirmPassword" placeholder="Confirmar Contraseña" required>
+            <p id="error-message" style="color: red; display: none;">Las contraseñas no coinciden</p>
+            <button type="submit" id="btn-register">Registrarse</button>
+        </form>
+    </div>
+
+    <div class="container-form sign-in">
+        
+        <!-- Formulario de inicio de sesión con clase original 'formulario' -->
+        <form class="formulario" action="login.php" method="POST">
+            <h2 class="create-account">Iniciar Sesión</h2>
+            <div class="iconos">
+                <div class="border-icon">
+                    <i class='bx bxl-google'></i>
+                </div>
+            </div>
+            <p class="cuenta-gratis">¿Aún no tienes cuenta?</p>
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <!-- Checkbox para aceptar políticas de privacidad -->
+            <div>
+                <input type="checkbox" id="privacyPolicy" required>
+                <label for="privacyPolicy">Acepto las <a href="politicas_privacidad.php" target="_blank">políticas de privacidad</a></label>
+            </div>
+            <!-- Enlace para recuperar contraseña -->
+            <p><a href="recuperar_contraseña.php">¿Olvidaste tu contraseña?</a></p>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido de nuevo a Healthy Lifestyle CETI</h2>
+                <p>Si aún no tienes una cuenta por favor regístrate aquí</p>
+                <button class="sign-up-btn">Registrarse</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Función para validar que las contraseñas coincidan
+        function validatePasswords() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const errorMessage = document.getElementById('error-message');
+            
+            if (password !== confirmPassword) {
+                errorMessage.style.display = 'block';
+                return false; // Prevenir el envío del formulario
+            }
+            
+            errorMessage.style.display = 'none';
+            return true; // Permitir el envío del formulario
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

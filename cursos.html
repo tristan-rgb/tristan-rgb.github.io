@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Healthy Lifestyle CETI, promoviendo un estilo de vida saludable.">
+    <title>Cursos - Healthy Lifestyle CETI</title>
+    <link rel="stylesheet" href="css/estilos.css"/>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Color de fondo general */
+        }
+        #container {
+            background-color: #ffffff; /* Color de fondo del contenedor */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden; /* Para evitar que los bordes sobresalgan */
+        }
+        header {
+            background-color: #007BFF; /* Color de fondo del encabezado */
+            color: white; /* Color del texto en el encabezado */
+            padding: 20px;
+            text-align: center;
+        }
+        #main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .course-container {
+            display: flex; /* Disposición en fila */
+            justify-content: center; /* Centrar los cursos */
+            margin-bottom: 20px; /* Espacio inferior */
+        }
+        .course-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .course-card img {
+            width: 100%; /* Ajusta la imagen al ancho del cuadro */
+            height: 200px; /* Altura fija para que todas las imágenes sean del mismo tamaño */
+            border-radius: 5px; /* Bordes redondeados */
+            object-fit: cover; /* Mantiene la proporción de la imagen */
+        }
+        .course-card a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.5em; /* Tamaño de fuente más grande */
+            margin-top: 10px; /* Espacio entre la imagen y el botón */
+            display: block; /* Asegura que el enlace ocupe todo el cuadro */
+        }
+        .button {
+            background-color: #28a745; /* Color verde para el botón */
+            color: white; /* Color del texto del botón */
+            padding: 10px 20px; /* Espacio dentro del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            font-size: 1.2em; /* Tamaño de fuente del botón */
+            cursor: pointer; /* Cambia el cursor al pasar por encima */
+            text-align: center; /* Centrar el texto dentro del botón */
+            margin-top: 15px; /* Espacio superior para el botón */
+            transition: background-color 0.3s; /* Transición para el color de fondo */
+        }
+        .button:hover {
+            background-color: #218838; /* Color verde más oscuro al pasar el cursor */
+        }
+        h2 {
+            font-size: 1.8em; /* Tamaño de fuente más grande para el título */
+            color: #007BFF; /* Color del título */
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007BFF; /* Color de fondo del pie de página */
+            color: white; /* Color del texto en el pie de página */
+        }
+        footer img {
+            margin: 0 10px; /* Espacio entre iconos */
+        }
+        .resources {
+            margin-top: 20px; /* Espacio superior para recursos */
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            document.body.classList.add('fade-in'); // Agregar la clase de animación al cargar
+        };
+    </script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <table>
+                <tr>
+                    <td width="30%">
+                        <a href="index.html">
+                            <img src="img/LogoDS.png" id="LogoTipo" alt="Healthy Lifestyle CETI" width="120em" height="120em">
+                        </a>
+                    </td>
+                    <td align="center" width="36.5%">
+                        <h1>Healthy Lifestyle CETI</h1>
+                    </td>
+                </tr>
+            </table>
+        </header>
+        <div id="main-content">
+            <h2>Cursos</h2>
+            <div class="course-container">
+                <div class="course-card">
+                    <img src="img/estres.png" alt="Curso para Aliviar el Estrés"> <!-- Imagen para el curso de estrés -->
+                    <div>Curso para Aliviar el Estrés</div>
+                    <a href="#" class="button">Iniciar Curso</a> <!-- Botón para iniciar curso -->
+                </div>
+                <div class="course-card">
+                    <img src="img/ansiedad.png" alt="Curso para Aliviar la Ansiedad"> <!-- Imagen para el curso de ansiedad -->
+                    <div>Curso para Aliviar la Ansiedad</div>
+                    <a href="#" class="button">Iniciar Curso</a> <!-- Botón para iniciar curso -->
+                </div>
+            </div>
+            <div class="resources">
+                <h2>Recursos</h2>
+                <div class="course-card">
+                    <a href="tecnicas_relajacion.html">Técnicas de Relajación</a>
+                </div>
+                <div class="course-card">
+                    <a href="identificacion.html">Identificación de Problemas Psicológicos</a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h2>¡Contáctanos!</h2>
+            <a href="http://www.facebook.com">
+                <img src="img/logoFace.png" class="iconoFace" width="30" height="30" alt="Facebook">
+            </a>
+            <img src="img/logoWhats.png" class="imgGira" width="40" height="40" alt="WhatsApp">
+        </footer>
+    </div>
+</body>
+</html>
